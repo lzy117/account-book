@@ -9,7 +9,7 @@ class QueryService:
         self.manager = RecordManager()
 
     def get_records_by_filter(self, filter_type: str = "all") -> List[Record]:
-        """ (Req010) 按 "全部", "仅收入", "仅支出" 筛选 [cite: 45] """
+        """ (Req010) 按 "全部", "仅收入", "仅支出" 筛选"""
         query = {}
         if filter_type == "收入":
             query = {"type": "收入"}
@@ -20,7 +20,7 @@ class QueryService:
 
     def search_records(self, term: str, criteria: str) -> List[Record]:
         """
-        (Req012, Req013, Req014) [cite: 54, 57, 59]
+        (Req012, Req013, Req014) 
         criteria 可以是 'date', 'amount', 'tag', 'keyword' (备注)
         """
         print(f"TODO: [QueryService] 正在搜索 {criteria} = {term}")
